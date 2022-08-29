@@ -108,8 +108,6 @@ jobs:
             cd frontend
             npm install
             npm audit fix --force --audit-level-critical
-            npm audit fix --force --audit-level-critical
-            npm audit fix --force --audit-level-critical
             npm audit --audit-level-critical
   scan-backend:
     docker:
@@ -123,7 +121,6 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix --force --audit-level-critical
             npm audit fix --force --audit-level-critical
             npm audit --audit-level-critical
 
@@ -143,6 +140,7 @@ jobs:
 #               exit 1
 #       - run:
 #           name: Ensure front-end infrastructure exist
+
 #           command: |
 #             aws cloudformation deploy \
 #               --template-file .circleci/files/frontend.yml \
